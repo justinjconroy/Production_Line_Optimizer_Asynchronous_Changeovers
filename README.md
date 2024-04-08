@@ -17,20 +17,24 @@
 **Problem Description**
 
 A production manager has 10 products to schedule on a single production line.  The products are labeled A through J and each product has a time to produce.
-Product     	A	B	C	D	E	F	G	H	I	J
-Time to produce	7	13	2	4	21	6	8	12	17	22
+
+|Product        |	A|B	| C	|D	|E	| F|	G	|H	| I	| J |
+|---------------|---|---|---|---|---|---|---|---|---|---|
+|Time to produce|	7 |	13	| 2	| 4 |	21	| 6	| 8	| 12 |	17	|22|
+
 There is also an asymmetric changeover matrix showing the time required to switch between one product and another as defined by the table below.  The table is read as the time to switch from the product in the row to the product in the column.  So, changing from producing A to producing B incurs a cost of 9 units of time, but changing from product B to product A incurs only 3 units of time.
- 	A	B	C	D	E	F	G	H	I	J
-A	-	9	13	6	7	8	3	17	7	3
-B	3	-	8	7	9	4	3	16	3	8
-C	5	0	-	8	7	9	4	3	16	5
-D	7	2	5	-	4	2	5	7	2	5
-E	4	3	4	7	-	4	3	4	7	3
-F	2	14	7	7	5	-	1	4	6	4
-G	8	7	9	4	16	3	-	4	9	8
-H	11	5	2	3	2	6	4	-	9	7
-I	4	2	12	9	1	5	5	6	-	9
-J	9	3	6	7	8	3	17	7	3	-
+|| 	A|	B	|C	|D	|E	|F	|G	|H	|I	|J |
+|---|---|---|---|---|---|---|---|---|---|---|
+|A|	-	|9	|13|	6|	7|	8|	3|	17|	7|	3|
+|B|	3|	-|	8|	7|	9|	4|	3|	16|	3|	8|
+|C|	5|	0|	-|	8|	7|	9|	4|	3|	16|	5|
+|D|	7|	2|	5|	-|	4|	2|	5|	7|	2|	5|
+|E|	4|	3|	4|	7|	-|	4|	3|	4|	7|	3|
+|F|	2|	14|	7|	7|	5|	-|	1|	4|	6|	4|
+|G|	8|	7|	9|	4|	16|	3|	-|	4|	9|	8|
+|H|	11|	5|	2|	3|	2|	6|	4|	-|	9|	7|
+|I|	4|	2|	12|	9|	1|	5|	5|	6|	-|	9|
+|J|	9|	3|	6|	7|	8|	3|	17|	7|	3|	-|
  
 We are given a starting sequence: (B, G, E, A, C, I, J, D, H, F).  It has a production time of 193 time units.
 This Java program uses a greedy heuristic:
